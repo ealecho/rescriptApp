@@ -1,0 +1,24 @@
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o App.cmi : cp ../bs/src/App.cmi
+o App.cmj : cp ../bs/src/App.cmj
+o App.cmt : cp ../bs/src/App.cmt
+o App.res : cp ../../src/App.res
+o Index.cmi : cp ../bs/src/Index.cmi
+o Index.cmj : cp ../bs/src/Index.cmj
+o Index.cmt : cp ../bs/src/Index.cmt
+o Index.res : cp ../../src/Index.res
+o ReactExperimental.cmi : cp ../bs/src/bindings/ReactExperimental.cmi
+o ReactExperimental.cmj : cp ../bs/src/bindings/ReactExperimental.cmj
+o ReactExperimental.cmt : cp ../bs/src/bindings/ReactExperimental.cmt
+o ReactExperimental.res : cp ../../src/bindings/ReactExperimental.res
+o ReactDomExperimental.cmi : cp ../bs/src/bindings/ReactDomExperimental.cmi
+o ReactDomExperimental.cmj : cp ../bs/src/bindings/ReactDomExperimental.cmj
+o ReactDomExperimental.cmt : cp ../bs/src/bindings/ReactDomExperimental.cmt
+o ReactDomExperimental.res : cp ../../src/bindings/ReactDomExperimental.res
+o ReactDomExperimental.resi : cp ../../src/bindings/ReactDomExperimental.resi
+o ReactDomExperimental.cmti : cp ../bs/src/bindings/ReactDomExperimental.cmti
+build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactExperimental.cmi ReactExperimental.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj 
