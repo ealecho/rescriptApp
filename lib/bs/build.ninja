@@ -1,21 +1,26 @@
 rescript = 1
 g_finger := /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescript/react/lib/ocaml/install.stamp
 g_finger := /Users/alechoedwin/Documents/Development/retodo/node_modules/bs-webapi/lib/ocaml/install.stamp
+g_finger := /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescriptbr/reform/lib/ocaml/install.stamp
+g_finger := /Users/alechoedwin/Documents/Development/retodo/node_modules/reschema/lib/ocaml/install.stamp
 rule astj
-  command = /Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/darwin/bsc.exe  -bs-v 9.1.4 -bs-jsx 3 -bs-super-errors -bs-no-version-header -absname -bs-ast -o $out $i
+  command = /Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/darwin/bsc.exe  -bs-v 9.1.4,1629546780.77 -ppx /Users/alechoedwin/Documents/Development/retodo/node_modules/lenses-ppx/ppx -bs-jsx 3 -bs-super-errors -bs-no-version-header -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/darwin/bsb_helper.exe -hash cd44aaf87e154af77e043d8ca67f3dcd $in
+  command = /Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/darwin/bsb_helper.exe -hash 4b07ac9c4e2ecba8331f1d4942883990 $in
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
-  command = /Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/darwin/bsc.exe -I src/bindings -I src -I /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescript/react/lib/ocaml -I /Users/alechoedwin/Documents/Development/retodo/node_modules/bs-webapi/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/darwin/bsc.exe -I src/bindings -I src -I /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescript/react/lib/ocaml -I /Users/alechoedwin/Documents/Development/retodo/node_modules/bs-webapi/lib/ocaml -I /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescriptbr/reform/lib/ocaml -I /Users/alechoedwin/Documents/Development/retodo/node_modules/reschema/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/App.cmj src/App.cmi ../../src/App.bs.js : mij src/App.ast
 o src/Index.ast : astj ../../src/Index.res
 o src/Index.d : deps src/Index.ast
 o src/Index.cmj src/Index.cmi ../../src/Index.bs.js : mij src/Index.ast
+o src/TodoApp.ast : astj ../../src/TodoApp.res
+o src/TodoApp.d : deps src/TodoApp.ast
+o src/TodoApp.cmj src/TodoApp.cmi ../../src/TodoApp.bs.js : mij src/TodoApp.ast
 o src/bindings/ReactExperimental.ast : astj ../../src/bindings/ReactExperimental.res
 o src/bindings/ReactExperimental.d : deps src/bindings/ReactExperimental.ast
 o src/bindings/ReactExperimental.cmj src/bindings/ReactExperimental.cmi ../../src/bindings/ReactExperimental.bs.js : mij src/bindings/ReactExperimental.ast
@@ -23,12 +28,12 @@ o src/bindings/ReactDomExperimental.ast : astj ../../src/bindings/ReactDomExperi
 o src/bindings/ReactDomExperimental.d : deps src/bindings/ReactDomExperimental.ast src/bindings/ReactDomExperimental.iast
 o src/bindings/ReactDomExperimental.iast : astj ../../src/bindings/ReactDomExperimental.resi
 rule mi
-  command = /Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/darwin/bsc.exe -I src/bindings -I src -I /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescript/react/lib/ocaml -I /Users/alechoedwin/Documents/Development/retodo/node_modules/bs-webapi/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-v $g_finger $i
+  command = /Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/darwin/bsc.exe -I src/bindings -I src -I /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescript/react/lib/ocaml -I /Users/alechoedwin/Documents/Development/retodo/node_modules/bs-webapi/lib/ocaml -I /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescriptbr/reform/lib/ocaml -I /Users/alechoedwin/Documents/Development/retodo/node_modules/reschema/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/bindings/ReactDomExperimental.cmi : mi src/bindings/ReactDomExperimental.iast
 rule mj
-  command = /Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/darwin/bsc.exe -bs-read-cmi -I src/bindings -I src -I /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescript/react/lib/ocaml -I /Users/alechoedwin/Documents/Development/retodo/node_modules/bs-webapi/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/darwin/bsc.exe -bs-read-cmi -I src/bindings -I src -I /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescript/react/lib/ocaml -I /Users/alechoedwin/Documents/Development/retodo/node_modules/bs-webapi/lib/ocaml -I /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescriptbr/reform/lib/ocaml -I /Users/alechoedwin/Documents/Development/retodo/node_modules/reschema/lib/ocaml -bs-super-errors -bs-no-version-header  -bs-package-name app -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/bindings/ReactDomExperimental.cmj ../../src/bindings/ReactDomExperimental.bs.js : mj src/bindings/ReactDomExperimental.ast src/bindings/ReactDomExperimental.cmi

@@ -11,6 +11,10 @@ o Index.cmi : cp ../bs/src/Index.cmi
 o Index.cmj : cp ../bs/src/Index.cmj
 o Index.cmt : cp ../bs/src/Index.cmt
 o Index.res : cp ../../src/Index.res
+o TodoApp.cmi : cp ../bs/src/TodoApp.cmi
+o TodoApp.cmj : cp ../bs/src/TodoApp.cmj
+o TodoApp.cmt : cp ../bs/src/TodoApp.cmt
+o TodoApp.res : cp ../../src/TodoApp.res
 o ReactExperimental.cmi : cp ../bs/src/bindings/ReactExperimental.cmi
 o ReactExperimental.cmj : cp ../bs/src/bindings/ReactExperimental.cmj
 o ReactExperimental.cmt : cp ../bs/src/bindings/ReactExperimental.cmt
@@ -21,4 +25,4 @@ o ReactDomExperimental.cmt : cp ../bs/src/bindings/ReactDomExperimental.cmt
 o ReactDomExperimental.res : cp ../../src/bindings/ReactDomExperimental.res
 o ReactDomExperimental.resi : cp ../../src/bindings/ReactDomExperimental.resi
 o ReactDomExperimental.cmti : cp ../bs/src/bindings/ReactDomExperimental.cmti
-build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj ReactExperimental.cmi ReactExperimental.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj 
+build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj TodoApp.cmi TodoApp.cmj ReactExperimental.cmi ReactExperimental.cmj ReactDomExperimental.cmi ReactDomExperimental.cmj 

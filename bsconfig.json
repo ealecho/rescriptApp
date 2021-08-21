@@ -13,6 +13,9 @@
     "-bs-super-errors",
     "-bs-no-version-header"
   ],
+  "ppx-flags": [
+    "lenses-ppx/ppx"
+   ],
   "package-specs": [
     {
       "module": "es6",
@@ -21,7 +24,9 @@
   ],
   "bs-dependencies": [
     "@rescript/react",
-    "bs-webapi"
+    "bs-webapi",
+    "@rescriptbr/reform",
+    "reschema"
   ],
   "bs-dev-dependencies": [
   ]

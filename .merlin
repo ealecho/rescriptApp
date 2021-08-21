@@ -1,4 +1,6 @@
+
 ####{BSB GENERATED: NO EDIT
+FLG -ppx /Users/alechoedwin/Documents/Development/retodo/node_modules/lenses-ppx/ppx
 FLG -ppx '/Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/darwin/bsc.exe -as-ppx -bs-jsx 3'
 S /Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/lib/ocaml
 B /Users/alechoedwin/Documents/Development/retodo/node_modules/rescript/lib/ocaml
@@ -7,6 +9,10 @@ S /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescript/react/l
 B /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescript/react/lib/ocaml
 S /Users/alechoedwin/Documents/Development/retodo/node_modules/bs-webapi/lib/ocaml
 B /Users/alechoedwin/Documents/Development/retodo/node_modules/bs-webapi/lib/ocaml
+S /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescriptbr/reform/lib/ocaml
+B /Users/alechoedwin/Documents/Development/retodo/node_modules/@rescriptbr/reform/lib/ocaml
+S /Users/alechoedwin/Documents/Development/retodo/node_modules/reschema/lib/ocaml
+B /Users/alechoedwin/Documents/Development/retodo/node_modules/reschema/lib/ocaml
 S src
 B lib/bs/src
 S src/bindings
